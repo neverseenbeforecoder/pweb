@@ -1,7 +1,7 @@
 <?php
 // inc/db.php
 $host = 'localhost';
-$dbname = 'new';
+$dbname = 'dstream';
 $user = 'root';
 $pass = '';
 
