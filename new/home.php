@@ -191,7 +191,7 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
                     <div class="col-6 col-sm-4 col-md-3">
                         <a href="pilem.php?id=<?= $video['id'] ?>" style="text-decoration: none; color: inherit;">
                             <div class="video-card">
-                                <img src="<?= htmlspecialchars($video['thumbnail']) ?>" alt="">
+                             <img src="upload/<?= htmlspecialchars($video['thumbnail']) ?>" alt="<?= htmlspecialchars($video['title']) ?>" class="img-fluid" />
                                 <div class="card-overlay"></div>
                                 <div class="title"><?= htmlspecialchars($video['title']) ?></div>
                             </div>
