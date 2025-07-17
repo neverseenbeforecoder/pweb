@@ -156,7 +156,7 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
         </div>
     </nav>
 
-    <!-- Carousel Dinamis -->
+
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-inner">
             <?php foreach ($carouselVideos as $index => $video): ?>
@@ -166,7 +166,7 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
                         <h2><?= htmlspecialchars($video['title']) ?></h2>
                         <p><?= htmlspecialchars($video['category']) ?></p>
                         <a href="preview.php?id=<?= $video['id'] ?>">
-                            <button class="btn btn-lg">Watch Now</button>
+                            <button class="btn btn-lg" style="text-decoration: none; color:white">Watch Now</button>
                         </a>
                     </div>
                 </div>
@@ -182,7 +182,7 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
         </button>
     </div>
 
-    <!-- Video Sections -->
+
     <div class="content-section">
         <h3 class="section-title">Trending Now</h3>
         <div class="row g-3">
@@ -202,7 +202,7 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
 
 
 
-            <!-- Footer Bootstrap -->
+
             <footer class="bg-black text-light py-4 mt-5">
                 <div class="container">
                     <div class="row text-center text-md-start">
@@ -214,10 +214,10 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
                             <h6 class="fw-bold">Navigation</h6>
                             <ul class="list-unstyled">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="home.php">Home</a>
+                                    <a class="nav-link" href="#">about us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="login.php">Log out</a>
+                                    <a class="nav-link" href="#">gatau mau isi apa</a>
                                 </li>
                             </ul>
                         </div>

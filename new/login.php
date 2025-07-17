@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <h3 class="text-center mb-4">Login</h3>
 
       <?php if (!empty($error)): ?>
-        <div class="alert alert-danger"><?= $error ?></div>
+        <div class="alert alert-danger"><?= $error ="masukkin username sama password dulu lah" ?></div>
       <?php endif; ?>
 
       <form method="POST" action="">
