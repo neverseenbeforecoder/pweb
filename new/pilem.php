@@ -112,8 +112,8 @@ $comments = $stmt->fetchAll();
 
       <?php if (isset($_SESSION['user_id'])): ?>
         <form method="post" action="comment.php" class="comment-form">
-          <input type="hidden" name="video_id" value="<?= $video['id'] ?>">
-          <textarea name="content" placeholder="Tulis komentar Anda..." required></textarea>
+          <input type="dhidden" name="video_id" value="<?= $video['id'] ?>">
+          <textarea name="content" placeholder="Tulis komentar Ana..." required></textarea>
           <button type="submit" class="btn btn-comment">Kirim Komentar</button>
         </form>
       <?php else: ?>

@@ -2,7 +2,7 @@
 require 'db.php';
 $stmt = $pdo->query("SELECT v.*, c.name AS category FROM videos v JOIN categories c ON v.category_id = c.id ORDER BY v.id DESC LIMIT 8");
 $videos = $stmt->fetchAll();
-$carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk carousel
+$carouselVideos = array_slice($videos, 0, 3);
 ?>
 
 
@@ -149,7 +149,7 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
                     <a class="nav-link" href="home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Log out</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
             </ul>
 
@@ -163,14 +163,14 @@ $carouselVideos = array_slice($videos, 0, 3); // Ambil 3 video pertama untuk car
                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
                    <img src="upload/<?= htmlspecialchars($video['thumbnail']) ?>" alt="<?= htmlspecialchars($video['title']) ?>" class="img-fluid" />
                     <div class="hero-caption text-white">
-                        <h2><?= htmlspecialchars($video['title']) ?></h2>
+                       <h2><?= htmlspecialchars($video['title']) ?></h2>
                         <p><?= htmlspecialchars($video['category']) ?></p>
                         <a href="preview.php?id=<?= $video['id'] ?>">
                             <button class="btn btn-lg" style="text-decoration: none; color:white">Watch Now</button>
                         </a>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php endforeach; ?> 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

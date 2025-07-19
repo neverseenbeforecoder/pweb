@@ -4,7 +4,7 @@ require 'db.php';
 
 $id = $_GET['id'] ?? 0;
 
-// Ambil data video berdasarkan ID
+
 $stmt = $pdo->prepare("SELECT v.*, c.name AS category FROM videos v JOIN categories c ON v.category_id = c.id WHERE v.id = ?");
 $stmt->execute([$id]);
 $video = $stmt->fetch();
@@ -13,7 +13,7 @@ if (!$video) {
     echo "Konten tidak ditemukan.";
     exit;
 }
-// Simpan ulasan jika ada POST request
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $review = trim($_POST['review'] ?? '');
     if ($review !== '') {
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Ambil semua ulasan untuk video ini
+
 $ulasanStmt = $pdo->prepare("SELECT * FROM reviews WHERE video_id = ? ORDER BY created_at DESC");
 $ulasanStmt->execute([$id]);
 $ulasanList = $ulasanStmt->fetchAll();
